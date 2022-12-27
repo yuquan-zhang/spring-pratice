@@ -22,6 +22,8 @@ public class CloudGatewayApplication {
                         .path("/get") // intercept calls to the /get path
                         .filters(f -> f.addRequestHeader("Hello", "Yong Zhang")) // add header
                         .uri("http://httpbin.org:80")) // forward to httpbin
+                .route(p -> p.path("/post").filters(f -> f.addRequestHeader("Title", "Gateway"))
+                        .uri("http://httpbin.org:80"))
                 .build();
     }
 }
