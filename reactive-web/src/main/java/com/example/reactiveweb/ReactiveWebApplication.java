@@ -3,8 +3,10 @@ package com.example.reactiveweb;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.data.r2dbc.repository.config.EnableR2dbcRepositories;
 
 @SpringBootApplication
+@EnableR2dbcRepositories
 public class ReactiveWebApplication {
 
     public static void main(String[] args) {
