@@ -11,8 +11,8 @@ public interface UserRepo extends ReactiveCrudRepository<User, Long> {
 
     /**
      * 根据手机号查找用户
-     * @param phone 手机号
-     * @return 用户对象
+     * @param phone 手机号，不能为空
+     * @return 用户对象 {@link User}
      */
     Mono<User> findByPhone(String phone);
 }
